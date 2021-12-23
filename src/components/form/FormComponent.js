@@ -22,12 +22,12 @@ const FormComponent = ({ info, setInfo, handleFormSubmit }) => {
         <div className="ui piled segments">
           <div className="ui segment brand">
             <a
-              href="https://github.com/clarusway"
+              href="https://github.com/fearm3/firebase-project"
               className="design"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <code>{"<Clarusway/> "}</code>
+              <code>{"<fearm3/>"}</code>
             </a>
             <span className="design header">design</span>
           </div>
