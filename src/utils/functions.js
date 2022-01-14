@@ -11,7 +11,7 @@ import {
   child,
   update,
 } from "firebase/database";
-import { successNote } from "./customTostify";
+
 export const addInfo = (info) => {
   const db = getDatabase();
   const userRef = ref(db, "contact");
@@ -21,16 +21,17 @@ export const addInfo = (info) => {
     phoneNumber: info.phoneNumber,
     gender: info.gender,
   });
-  successNote("Successfully added");
-  console.log("veri eklendi");
+  // console.log("add data");
 };
 export const useFetch = () => {
   const [contactList, setContactList] = useState();
   const [isLoading, setIsLoading] = useState(false);
+
   useEffect(() => {
     setIsLoading(true);
     const db = getDatabase();
     const userRef = ref(db, "contact");
+    
     onValue(query(userRef), (snapshot) => {
       const contacts = snapshot.val();
       //   console.log(snapshot.val());
